@@ -1,0 +1,69 @@
+
+body{
+    margin: 0 !important;
+    padding: 0;
+    background-color: #f9fbbc !important;
+}
+.topPartContainer {
+    text-align: center;
+}
+.searchRow{
+    height: 60px;
+}
+.btn{
+    background-color: #e4f623 !important;
+    color: black !important;
+}
+.searchBtn{
+    height: 38px;
+    background-color: aquamarine !important;
+}
+.top-nav{
+    width: max-content ;
+    background-color: hsl(203, 39%, 44%);
+    margin: 7px;
+    padding: 7px;
+    
+
+}
+label {
+    color: beige;
+
+}
+
+.searchBox{
+    border-left: none !important;
+}
+.searchIcon{
+    background-color: white !important;
+    border: none !important;
+}
+.checked {
+    color: orange;
+  }
+
+.picture{
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+}
+
+.hotelStarRating{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#map {
+    height: 150px;
+    width: 500px;
+  }
+.hotel{
+    margin: 5px;
+    padding: 5px;
+    border: 5px groove #b7fae6;
+    border-radius: 0px 20px 19px 0px;
+    background-color: #e4f623;
+}
+
+/* Buttons */
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+</head>
+<body>
+    <div class = 'container top-nav topPartContainer'>
+        <!-- search -->
+        <div class = 'container-fluid searchContainer'>
+            <div class = 'row searchRow pt-2 '>
+                <div class = 'col-10  pr-0 mr-0'>
+                    <div class="input-group mb-3">
+                        <!-- searchIcon -->
+                        <div class="input-group-prepend ">
+                          <span class="input-group-text searchIcon" id="basic-addon1">
+                              <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="grey" >
+                                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"/>
+                             </svg>
+                        </span>
+                        </div>
+                        <!-- searchIcon -->
+                        <!-- searchBox -->
+                        <input type="text" class="form-control searchBox" placeholder="Search here" >
+                        <!-- searchBox -->
+                      </div>
+                </div>
+                <!-- searchBTN -->
+                <div class = 'btn btn-primary  searchBtn col-2 '>Search</div>
+                <!-- searchBTN -->
+            </div>
+                <!-- search -->
+                <!-- Calendars -->
+            <div class = 'row calendars pb-3'>
+                <div class = 'col-4 checkinCalendar '>
+                    <label>Checkin</label><br>
+                    <input type='date' class = "date" value =''>
+                </div>
+                <div class = 'col-4 checkoutCalendar'>
+                    <label>Checkout</label><br>
+                    <input type='date' class = "date" value =''>
+                </div>
+                <div class = 'col-4 rooms'>
+                    <label>Room Type</label><br>
+                    <div class="btn-group container-fluid">
+                        <button type="button" class="btn btn-secondary box dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          All
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right roomTypesDropDwn">
+                        </div>
+                      </div>
+                </div>
+            </div>
+                <!-- Calendars -->
+                <!-- Filters -->
+            <div class= 'row filters pt-3'>
+                <div class = 'col-4 '>
+                    <label for="price">Max Price</label>
+                    <label for='max-price' class = 'priceSlider'>1000$</label>
+                    <div class= 'container-fluid'>
+                        <input type="range" class="custom-range slider" min = '0' max = '3000' id="customRange1" value =''>
+                    </div>
+                    
+                </div>
+                <div class = 'col-4 container-fluid'>
+                    <div class = 'row'>
+                        <div class = 'col-6 propertyType'>
+                            <label>PropertyType</label>
+                            <div class="btn-group container-fluid">
+                                <button type="button" class="btn btn-secondary dropdown-toggle dropdownStarHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  All
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item starRating" type="button" value = '1'>1 Star</button>
+                                  <button class="dropdown-item starRating" type="button" value = '2'>2 Star</button>
+                                  <button class="dropdown-item starRating" type="button" value = '3'>3 Star</button>
+                                  <button class="dropdown-item starRating" type="button" value = '4'>4 Star</button>
+                                  <button class="dropdown-item starRating" type="button" value = '5'>5 Star</button>
+                                  <button class="dropdown-item starRating starAllBtn d-none" type="button" value = 'All'>Remove Filters</button>
+                                </div>
+                              </div>
+                        </div>
+                        <div class = 'col-6 rating'>
+                            <label>Guest rating</label><br>
+                            <div class="btn-group container-fluid">
+                                <button type="button" class="btn btn-secondary dropdown-toggle dropdownGuestHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  All
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <button class="dropdown-item guestRating" type="button" value = 'Okay'>Okay</button>
+                                    <button class="dropdown-item guestRating" type="button" value = 'Fair'>Fair</button>
+                                    <button class="dropdown-item guestRating" type="button" value = 'Good'>Good</button>
+                                    <button class="dropdown-item guestRating" type="button" value = 'Very Good'>Very Good</button>
+                                    <button class="dropdown-item guestRating" type="button" value = 'Excellent'>Excellent</button>
+                                    <button class="dropdown-item guestRating guestAllBtn d-none" type="button" value = 'All'>Remove Filters</button>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <div class = 'col-4 container-fluid'>
+                    <div class="row">
+                        <div class = 'col-6 hotelLocation'>
+                            
+                        </div>
+                        <div class = 'col-6 hotelLocation'>
+                            <label>Explore Cities</label>
+                            <div class="btn-group container-fluid ">
+                                <button type="button" class="btn btn-secondary dropdown-toggle dropDownCityHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  All
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right dropDownCity">
+                                    <button class="dropdown-item cityFilter cityAllBtn d-none" type="button" value = 'All'>Remove filters</button>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Filters -->
+        </div>    
+    </div>
+    <!-- Map and Sort by Filter (Sauna etc) -->
+    <div class = 'container pt-4'>
+        <div class = 'row'>
+            <div class = 'container-fluid col-3'><iframe
+                width="500"
+                height="200"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d83998.94722687619!2d2.277019841665155!3d48.8588377391234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgr!4v1554987763683!5m2!1sen!2sgr" allowfullscreen>
+              </iframe></div>
+            <div class = 'col-3'></div>
+            <div class = 'col-3'></div>
+            <div class = 'col-3'>
+                <label>Sort By</label><br>
+                <div class="btn-group">
+                    <label style = 'color: black'>Sort by</label><br>
+                    <button type="button" class="btn btn-secondary dropdown-toggle dropdownSortHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      All
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right sortByFilter">
+                      <button class="dropdown-item sortByBtn sortAllBtn d-none" type="button" value = 'ALL'>Remove Filters</button>
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Map and Sort by Filter (Sauna etc) -->
+    <!-- Hotel -->
+    <div class = 'container hotels'>
+    </div>
+    <!-- Hotel -->
+   
+<script src="node_modules/moment/moment.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- MyScript -->
+<script src='app.js'></script>
+</body>
+</html>
